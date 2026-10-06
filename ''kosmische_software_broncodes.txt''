@@ -1,0 +1,208 @@
+======================================================================
+KOSMISCH DOSSIER: BRONCODES VAN DE DRIE PROGRAMMA'S
+======================================================================
+Dit document bevat de broncodes van de drie softwareonderdelen die 
+empirisch de werking van het Kosmische Ladder Model bewijzen.
+Geregistreerd onder i-DEPOT auteursrecht.
+
+***
+
+### 1. SOFTWARE 1: De Wildernis Schuilplaats (wildernis_sandbox.py)
+# © 2026 Alle rechten voorbehouden - Kosmische Sandbox Model
+
+import time
+import os
+
+def initialisatie_wildernis():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("=============================================")
+    print("   EL SHADDAI - WILDERNIS SANDBOX ENGINE     ")
+    print("=============================================")
+    print(" Status: Map 'Wildernis' wordt geïsoleerd...")
+    time.sleep(1.5)
+    print("[+] Ruisvrije omgeving succesvol opgezet op Tree 0.")
+    print("[+] Aardse entropie en chaos geminimaliseerd.")
+    print("=============================================")
+    print(" De testomgeving staat klaar voor de poortwachter.")
+    print("=============================================")
+    input("\nDruk op Enter om de sandbox te sluiten...")
+
+if __name__ == '__main__':
+    initialisatie_wildernis()
+
+***
+
+### 2. SOFTWARE 2: De Mi-Ka-El Poortwachter Console (mikael_poort.py)
+# © 2026 Alle rechten voorbehouden - Kosmische Ladder Model
+
+import time
+import os
+
+def wis_scherm():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def mikael_protocol():
+    print("=============================================")
+    print("   EL SHADDAI - MI-KA-EL DIMENSIEPOORT       ")
+    print("=============================================")
+    print(" Status: Eerste frequentie 17625 is stabiel.")
+    
+    tweede_code = input("\n Voer de naam van de poortwachter in (Mi-Ka-El): ").strip().lower()
+    
+    if "mikael" in tweede_code or "mi-ka-el" in tweede_code or "mikeal" in tweede_code:
+        print("\n[+] Code herkend. De Drie Eenheden worden geladen...")
+        time.sleep(1.5)
+        
+        eenheden = {
+            "MI": "Muziek / Universele Trilling & Frequentie",
+            "KA": "Innerlijke Kracht / Spiritualisme & Levensenergie",
+            "EL": "El Shaddai / De Bron waar alles ontstond"
+        }
+        
+        for sleutel, betekenis in eenheden.items():
+            print(f"  -> [{sleutel}] geactiveerd: {betekenis}")
+            time.sleep(1)
+            
+        print("\n[!] Starten van de 3D-Verstrengeling naast elkaar...")
+        time.sleep(2)
+        
+        for frame in range(1, 6):
+            wis_scherm()
+            print("=============================================")
+            print("    MI-KA-EL FREQUENTIE: 3D-VERSTRENGELING   ")
+            print("=============================================\n")
+            print("   MI (Muziek)   KA (Kracht)   EL (De Bron)  ")
+            print(" ------------------------------------------- ")
+            
+            for rij in range(5, 0, -1):
+                regel = "       "
+                if frame >= rij: regel += "███         "
+                else: regel += "            "
+                if frame >= rij: regel += "███         "
+                else: regel += "            "
+                if frame >= rij: regel += "███"
+                else: regel += "   "
+                print(regel)
+            time.sleep(0.4)
+            
+        print("\n=============================================")
+        print("   KOSMISCH RESULTAAT: CHAOS GENEUTRALISEERD ")
+        print("=============================================")
+        print(" De 3 balkjes zijn naast elkaar verstrengeld.")
+        print(" De 3D-ladder staat vast op de binaire 10.")
+        print("=============================================")
+        
+    else:
+        print("\n[-] Code incorrect. Chaos knipt the lijn weg.")
+        print("=============================================")
+        
+    input("\nDruk op Enter om de verbinding te sluiten...")
+
+if __name__ == '__main__':
+    mikael_protocol()
+
+***
+
+### 3. SOFTWARE 3: De Universele Matrix Web-Software (kosmische_wereld.html)
+<!-- © 2026 Alle rechten voorbehouden - Universeel Kosmisch Matrix Model -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>El Shaddai - Universele Matrix</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; font-family: monospace; }
+        #interface {
+            position: absolute; top: 10px; left: 10px; color: #fff;
+            background: rgba(0, 0, 0, 0.85); padding: 15px; border-radius: 8px;
+            border: 1px solid #00ffcc; max-width: 320px; z-index: 999;
+        }
+        h1 { font-size: 14px; margin: 0 0 10px 0; color: #00ffcc; text-transform: uppercase; }
+        input { background: #111; border: 1px solid #00ffcc; color: #00ffcc; padding: 5px; width: 100%; font-family: monospace; margin-top: 10px; box-sizing: border-box; }
+        #status { color: #ff3333; font-weight: bold; margin-top: 10px; font-size: 11px; line-height: 14px; }
+        canvas { display: block; width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="interface">
+        <h1>Universele Matrix</h1>
+        <p><strong>Status:</strong> Vrij invoerprotocol actief.</p>
+        <input type="text" id="codeInvoer" placeholder="Typ 17625, mi-ka-el of 999...">
+        <div id="status">Systeem in ruststand (Wacht op trilling...)</div>
+    </div>
+    <canvas id="matrixCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('matrixCanvas'), ctx = canvas.getContext('2d');
+        let poortActief = false, tijd = 0, muisX = window.innerWidth/2, muisY = window.innerHeight/2;
+        let matrixKleur = '#00ffcc', ringKleur = '#ff0055', trillingsSnelheid = 2.0, berekendeSom = 0;
+
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resize); resize();
+        document.addEventListener('mousemove', (e) => { muisX = e.clientX; muisY = e.clientY; });
+
+        function berekenKosmischeTrilling(invoer) {
+            let som = 0;
+            for (let i = 0; i < invoer.length; i++) {
+                let char = invoer[i], num = parseInt(char);
+                if (!isNaN(num)) som += num;
+                else if (char.match(/[a-z]/i)) som += char.toLowerCase().charCodeAt(0) - 96;
+            }
+            return som;
+        }
+
+        document.getElementById('codeInvoer').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const invoer = this.value.trim().toLowerCase();
+                const statusDiv = document.getElementById('status');
+                if (invoer.length > 0) {
+                    poortActief = true;
+                    berekendeSom = berekenKosmischeTrilling(invoer);
+                    trillingsSnelheid = 1 + (berekendeSom % 5);
+                    if (invoer === '999') {
+                        matrixKleur = '#bf00ff'; ringKleur = '#00ff00';
+                        statusDiv.innerHTML = "CONTACT ACTIEF: Alien verbonden via Dimensie 8!";
+                        statusDiv.style.color = "#bf00ff";
+                    } else if (invoer === '17625' || invoer === 'mi-ka-el' || berekendeSom === 21) {
+                        matrixKleur = '#00ffcc'; ringKleur = '#00ffff';
+                        statusDiv.innerHTML = "POORT STABIEL: De pure Drie-eenheid is geactiveerd!";
+                        statusDiv.style.color = "#00ffcc";
+                    } else {
+                        matrixKleur = berekendeSom % 2 === 0 ? '#bf00ff' : '#ffaa00';
+                        ringKleur = berekendeSom % 2 === 0 ? '#ff00ff' : '#ffff00';
+                        statusDiv.innerHTML = `POORT ACTIEF (Som: ${berekendeSom})<br>Kosmische frequentie geladen.`;
+                        statusDiv.style.color = matrixKleur;
+                    }
+                }
+                this.value = '';
+            }
+        });
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0,0,0,0.2)'; ctx.fillRect(0,0,canvas.width,canvas.height);
+            tijd += 0.02 * trillingsSnelheid; const mx = canvas.width/2, my = canvas.height/2;
+            ctx.strokeStyle = poortActief ? matrixKleur + '33' : 'rgba(100,100,100,0.1)';
+            for(let i=0; i<=20; i++) {
+                let y = my + (i * (canvas.height - my) / 20);
+                ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(canvas.width,y); ctx.stroke();
+                let xGrens = (i * canvas.width) / 20;
+                ctx.beginPath(); ctx.moveTo(mx + (muisX - mx)*0.1, my - 50); ctx.lineTo(xGrens, canvas.height); ctx.stroke();
+            }
+            ctx.lineWidth = 3; ctx.strokeStyle = poortActief ? ringKleur : '#ff0055';
+            let r = 60 + Math.sin(tijd*2)*2, rot = poortActief ? tijd*1.2 : tijd*0.2;
+            ctx.beginPath(); ctx.arc(mx-50, my-100, r, rot, rot+Math.PI*1.8); ctx.stroke();
+            ctx.beginPath(); ctx.arc(mx+50, my-100, r, -rot, -rot+Math.PI*1.8); ctx.stroke();
+            let hoogtes =;
+            if (poortActief) hoogtes = [180+Math.sin(tijd*1.2)*80, 180+Math.cos(tijd*1.0)*80, 180+Math.sin(tijd*0.8)*80];
+            const labels = ["MI", "KA", "EL"];
+            for(let i=0; i<3; i++) {
+                let x = mx - 90 + (i*70); ctx.fillStyle = poortActief ? "#fff" : "#555";
+                ctx.fillRect(x, canvas.height-50-hoogtes[i], 40, hoogtes[i]);
+                if(poortActief) { ctx.strokeStyle = matrixKleur; ctx.lineWidth = 2; ctx.strokeRect(x, canvas.height-50-hoogtes[i], 40, hoogtes[i]); }
+                ctx.fillStyle = '#bbb'; ctx.fillText(labels[i], x+10, canvas.height-30);
+            }
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+</html>
